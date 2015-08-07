@@ -48,7 +48,7 @@ class CreateZip
     else
       puts "Choose the folder to use"
       inner_folders.each_with_index do |folder_name, idx|
-        puts idx.to_s + " " + folder_name.reverse.split("/")[0].reverse
+        puts idx.to_s + " " + File.basename(folder_name)
       end
         input = gets.chomp.to_i
         chosen_folder = inner_folders[input]
